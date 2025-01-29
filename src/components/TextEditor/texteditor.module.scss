@@ -1,0 +1,17 @@
+.text_editor{
+    .lable{
+        font-size: 12px;
+        font-family: poppins-600;
+        margin-bottom: 10px;
+        color: var(--color-dark);
+      }
+    .wrapper{
+        width: 100%;
+        border: 1px solid var(--color-info-medium);
+        border-radius: 6px;
+    }
+    .editor{
+        min-height: 200px;
+        padding: 0 10px;
+    }
+}

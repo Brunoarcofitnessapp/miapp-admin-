@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  font-family: Poppins;
+  background-color: var(--color-bg);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+p {
+  margin: 0;
+}
+
+:root {
+  --color-bg: #f8f8fa;
+  --color-white: #fff;
+  --color-primary: #005cf3;
+  --color-primary-light: #4285f4;
+  --color-info: #aed1f550;
+  --color-info-medium: #aed1f580;
+  --color-danger: #ea4335;
+  --color-danger-light: #fb8d84;
+  --color-success: #34a853;
+  --color-gray-shade: #eeeeee;
+  --color-dark: #000000;
+  --color-light: #00000073;
+  --color-text-dark: #000000a6;
+  --color-text-light-medium: #aeaeae;
+  --color-text-light: #bcbcbc;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: Poppins-bold;
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: Poppins-600;
+  src: url("./assets/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: Poppins-500;
+  src: url("./assets/fonts/Poppins-Medium.ttf");
+}
+
+/*-------------------------------*/
+/*         PAGE LAYOUT           */
+/*-------------------------------*/
+
+.ant-layout {
+  height: 100vh;
+  .ant-layout-sider {
+    background-color: var(--color-primary);
+    width: 300px !important;
+    max-width: 300px;
+    min-width: 300px;
+    flex: 0 0 300px;
+    .ant-menu {
+      background-color: transparent;
+      color: var(--color-white) !important;
+      .cstm-menu-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: unset;
+        margin: 0;
+        .sub_links {
+          font-size: 24px;
+          color: var(--color-white);
+        }
+      }
+      .ant-menu-item:hover {
+        background-color: var(--color-success);
+      }
+      .ant-menu-submenu {
+        padding: 0;
+        .ant-menu-submenu-title {
+          font-size: 24px;
+          height: unset;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .ant-menu-sub {
+          .ant-menu-item {
+            font-size: 18px;
+            padding-left: 100px !important;
+            height: 45px;
+            margin: 0;
+            .submenu-links {
+              color: var(--color-white);
+            }
+          }
+          .ant-menu-item:hover {
+            background-color: var(--color-success);
+          }
+        }
+      }
+      .side-icon {
+        width: 20px;
+        vertical-align: unset;
+        margin-right: 25px;
+      }
+      .ant-menu-submenu-arrow {
+        display: none;
+      }
+      .ant-menu-submenu-selected {
+        color: var(--color-white);
+      }
+      .ant-menu-submenu-title:hover {
+        color: var(--color-white);
+        background-color: var(--color-success);
+      }
+    }
+    .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background: linear-gradient(
+        to right,
+        #6362622a 0%,
+        #ffffff17 30%,
+        #ffffff17 80%,
+        #63626217 100%
+      ) !important;
+      color: var(--color-white) !important;
+    }
+  }
+  .site-layout {
+    .layout-header {
+      padding: 34px 34px 0px;
+      .title {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--color-text-dark);
+      }
+      .desc {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--color-text-light);
+      }
+    }
+    .ant-layout-content {
+      padding: 34px !important;
+      margin: 0 !important;
+      overflow: auto;
+    }
+  }
+}
+
+/*-------------------------------*/
+/*         PAGE LAYOUT           */
+/*-------------------------------*/
+/*-------------------------------*/
+/*         TABLE           */
+/*-------------------------------*/
+
+// .ant-table {
+//   .ant-table-container {
+//     .ant-table-thead > tr > th {
+//       background-color: red !important;
+//       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.13);
+//       :nth-child(1){
+//         // border-radius: 8px;
+
+//       }
+//     }
+//     .ant-table-tbody {
+//       .ant-table-row {
+//       }
+//     }
+//   }
+// }
+.ant-table {
+  background-color: transparent;
+  .ant-table-container {
+    border: none !important;
+    // padding: 5px;
+    .ant-table-content {
+      thead {
+        // background-color: red !important;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.13);
+        .ant-table-cell {
+          background-color: var(--color-white);
+          color: var(--color-text-light-medium) !important;
+          font-size: 18px;
+          font-family: poppins;
+          font-weight: 500;
+        }
+      }
+      .ant-table-thead {
+        background-color: var(--color-white);
+        tr {
+          border-radius: 8px !important;
+          th {
+            border-bottom: none !important;
+            padding: 10px !important;
+            margin-bottom: 10px !important;
+            border-left: none !important;
+            &:first-child {
+              border-top-left-radius: 8px !important;
+              border-bottom-left-radius: 8px !important;
+            }
+            &:last-child {
+              border-top-right-radius: 8px !important;
+              border-bottom-right-radius: 8px !important;
+            }
+          }
+        }
+        // .ant-table-cell {
+        //   background-color: transparent;
+        //   color: #fff;
+        // }
+      }
+      tbody {
+        .ant-table-cell {
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--color-dark);
+        }
+      }
+      .ant-table-tbody {
+        .ant-table-expanded-row {
+          margin-top: 0px !important;
+          td {
+            border-bottom: none !important;
+            padding: 20px !important;
+            &:first-child {
+              border-top-left-radius: 0 !important;
+              border-bottom-left-radius: 0 !important;
+            }
+            &:last-child {
+              border-top-right-radius: 0 !important;
+              border-bottom-right-radius: 0 !important;
+              text-align: unset;
+            }
+          }
+        }
+        tr {
+          background-color: var(--color-white);
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.13);
+        }
+        td {
+          border-bottom: none !important;
+          padding: 10px !important;
+          &:first-child {
+            border-top-left-radius: 8px !important;
+            border-bottom-left-radius: 8px !important;
+          }
+          &:nth-child(2) {
+            color: var(--color-primary) !important;
+          }
+          &:last-child {
+            border-top-right-radius: 8px !important;
+            border-bottom-right-radius: 8px !important;
+            text-align: unset;
+          }
+        }
+      }
+    }
+  }
+  table {
+    border-spacing: 0px 8px;
+  }
+
+  .ant-table-container::after {
+    box-shadow: unset;
+  }
+}
+
+/*-------------------------------*/
+/*         TABLE           */
+/*-------------------------------*/
+/*-------------------------------*/
+/*        TABLE PAGINATIOND      */
+/*-------------------------------*/
+
+.ant-pagination-options {
+  .ant-select-selector {
+    background-color: transparent !important;
+    border: unset !important;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+
+/*-------------------------------*/
+/*        TABLE PAGINATIOND      */
+/*-------------------------------*/
+
+/*-------------------------------*/
+/*        TEXT DROP DOWN         */
+/*-------------------------------*/
+.custom-antd-select {
+  &.ant-select-single {
+    &:not(.ant-select-customize-input) {
+      .ant-select-selector {
+        height: 50px;
+        background-color: #eeeeee;
+        border: unset;
+        color: var(--color-text-dark);
+        border-radius: 6px;
+        align-items: center;
+        padding: 0px 14px;
+      }
+    }
+  }
+}
+/*-------------------------------*/
+/*        TEXT DROP DOWN         */
+/*-------------------------------*/
+
+/*-------------------------------*/
+/*        MODAL         */
+/*-------------------------------*/
+.ant-modal {
+  width: 80% !important;
+}
+.ant-modal-confirm {
+  width: 416px !important;
+}
+.ant-notification {
+  left: 50% !important;
+  top: 24px !important;
+  transform: translate(-50%, -5%) !important;
+}

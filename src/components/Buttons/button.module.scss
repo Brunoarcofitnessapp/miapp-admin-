@@ -1,0 +1,22 @@
+.common_bttn {
+  cursor: pointer;
+  background-color: var(--color-success);
+  border-radius: 6px;
+  width: 210px;
+  height: 50px;
+  border: none;
+  .common_bttn_p {
+    text-transform: capitalize;
+    font-family: poppins-500;
+    font-size: 14px;
+    color: var(--color-white);
+  }
+}
+.common_bttn:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-primary);
+}
+.common_bttn:focus {
+  background-color: var(--color-primary);
+}
+

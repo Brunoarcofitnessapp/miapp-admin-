@@ -1,0 +1,52 @@
+.red {
+  color: var(--color-danger);
+  font-size: 12px;
+  font-family: poppins-600;
+}
+.green {
+  color: var(--color-success);
+  font-size: 12px;
+  font-family: poppins-600;
+}
+
+/******** COMMON INPUT ********/
+
+.common_input_main_div {
+  .common_input_lable {
+    font-size: 12px;
+    font-family: poppins-500;
+    margin-bottom: 10px;
+    color: var(--color-dark);
+  }
+  .common_input_field {
+    height: 50px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    width: 100%;
+    border: unset;
+    outline: unset;
+    padding: 0px 14px;
+    font-size: 14px;
+    color: var( --color-text-dark);
+    font-family: poppins-500;
+  }
+}
+
+/*-------------------------------*/
+/*           TEXT AREA           */
+/*-------------------------------*/
+.text_area_div{
+  .lable{
+    font-size: 12px;
+    font-family: poppins-600;
+    margin-bottom: 10px;
+    color: var(--color-dark);
+  }
+  .textArea{
+    background-color: #EEEEEE;
+    color: var( --color-text-dark);
+    padding: 14px 20px;
+    border-radius: 6px;
+    border: none;
+  }
+}

@@ -1,0 +1,14 @@
+.text_drop_down {
+  .common_input_lable {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-dark);
+  }
+  .textDropDownContainer {
+    .drop_down_arrow {
+      color: var(--color-text-light-medium) !important;
+      font-size: 14px;
+    }
+  }
+}

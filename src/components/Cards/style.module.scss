@@ -1,0 +1,46 @@
+.catg_card {
+  background: var(--color-white);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  padding: 20px;
+  .row{
+      justify-content: space-between;
+      .title{
+          font-size: 20px;
+          font-weight: 600;
+          color: var(--color-dark);
+      }
+      .icon_div{
+          height: 48px;
+          width: 48px;
+          background-color: var(--color-info);
+          border-radius: 100%;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          .icon{
+              font-size: 24px;
+              color: var(--color-primary-light);
+          }
+      }
+  }
+  .val{
+      font-size: 30px;
+    font-family: poppins-bold;
+    color: var(--color-primary-light);
+    margin-top: -10px;
+  }
+  .desc{
+      font-size: 12px;
+      color: var(--color-text-light-medium);
+  }
+}
+
+.card_layout {
+    background-color: var(--color-white);
+    padding: 40px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.13);
+    border-radius: 6px;
+    margin-top: 34px;
+  }
+  

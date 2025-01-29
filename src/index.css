@@ -1,0 +1,414 @@
+body {
+  margin: 0;
+  font-family: Poppins;
+  background-color: var(--color-bg);
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+}
+  html::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+  html::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light); 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+p {
+  margin: 0;
+}
+:root {
+  --color-bg: #f8f8fa;
+  --color-white: #fff;
+  --color-sidebar: #fff;
+  --color-primary: #000;
+  --color-primary-light: #00e0ff;
+  --color-info: #aed1f550;
+  --color-info-medium: #aed1f580;
+  --color-danger: #ea4335;
+  --color-danger-light: #fb8d84;
+  --color-success: #00e0ff;
+  --color-gray-shade: #eeeeee;
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-text-dark: #000;
+  --color-text-light-medium: #aeaeae;
+  --color-text-light: #bcbcbc;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: Poppins-bold;
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: Poppins-600;
+  src: url("./assets/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: Poppins-500;
+  src: url("./assets/fonts/Poppins-Medium.ttf");
+}
+/*-------------------------------*/
+/*         PAGE LAYOUT           */
+/*-------------------------------*/
+
+
+.ant-layout {
+  min-height: 100vh;
+}
+.ant-layout .ant-layout-sider {
+  background-color: var(--color-primary);
+  width: 300px !important;
+  max-width: 300px;
+  min-width: 300px;
+  flex: 0 0 300px;
+}
+.ant-layout .ant-layout-sider .ant-menu {
+  background-color: transparent;
+  color: var(--color-white) !important;
+}
+.ant-layout .ant-layout-sider .ant-menu .cstm-menu-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: unset;
+  margin: 0;
+}
+.ant-layout .ant-layout-sider .ant-menu .cstm-menu-item .sub_links {
+  font-size: 18px;
+  color: var(--color-sidebar);
+}
+.ant-layout .ant-layout-sider .ant-menu .ant-menu-item:hover {
+  background-color: var(--color-success);
+}
+.ant-layout .ant-layout-sider .ant-menu .ant-menu-submenu {
+  padding: 0;
+}
+.ant-layout
+  .ant-layout-sider
+  .ant-menu
+  .ant-menu-submenu
+  .ant-menu-submenu-title {
+  font-size: 18px;
+  height: unset;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.ant-layout
+  .ant-layout-sider
+  .ant-menu
+  .ant-menu-submenu
+  .ant-menu-sub
+  .ant-menu-item {
+  font-size: 18px;
+  padding-left: 100px !important;
+  height: 45px;
+  margin: 0;
+}
+.ant-layout
+  .ant-layout-sider
+  .ant-menu
+  .ant-menu-submenu
+  .ant-menu-sub
+  .ant-menu-item
+  .submenu-links {
+  color: var(--color-white);
+}
+.ant-layout
+  .ant-layout-sider
+  .ant-menu
+  .ant-menu-submenu
+  .ant-menu-sub
+  .ant-menu-item:hover {
+  background-color: var(--color-success);
+}
+.ant-layout .ant-layout-sider .ant-menu .side-icon {
+  width: 20px;
+  vertical-align: unset;
+  margin-right: 25px;
+}
+.ant-layout .ant-layout-sider .ant-menu .ant-menu-submenu-arrow {
+  display: none;
+}
+.ant-layout .ant-layout-sider .ant-menu .ant-menu-submenu-selected {
+  color: var(--color-white);
+}
+.ant-layout .ant-layout-sider .ant-menu .ant-menu-submenu-title:hover {
+  color: var(--color-white);
+  background-color: var(--color-success);
+}
+.ant-layout
+  .ant-layout-sider
+  .ant-menu:not(.ant-menu-horizontal)
+  .ant-menu-item-selected {
+  background: linear-gradient(
+    to right,
+    #6362622a 0%,
+    #ffffff17 30%,
+    #ffffff17 80%,
+    #63626217 100%
+  ) !important;
+  color: var(--color-white) !important;
+}
+.ant-layout .site-layout .layout-header {
+  padding: 18px 18px;
+  /* background-color: var(--color-danger); */
+}
+.ant-layout .site-layout .layout-header .title {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+.ant-layout .site-layout .layout-header .desc {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+.ant-layout .site-layout .ant-layout-content {
+  padding: 34px;
+  margin: 0 !important;
+  overflow: auto;
+}
+/*-------------------------------*/
+/*         PAGE LAYOUT           */
+/*-------------------------------*/
+/*-------------------------------*/
+/*         TABLE           */
+/*-------------------------------*/
+.ant-table {
+  background-color: transparent;
+}
+.ant-table .ant-table-container {
+  border: none !important;
+}
+.ant-table .ant-table-container .ant-table-content thead {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.13);
+}
+.ant-table .ant-table-container .ant-table-content thead .ant-table-cell {
+  background-color: var(--color-white);
+  color: var(--color-text-light-medium) !important;
+  font-size: 18px;
+  font-family: poppins;
+  font-weight: 500;
+}
+.ant-table .ant-table-container .ant-table-content .ant-table-thead {
+  background-color: var(--color-white);
+}
+.ant-table .ant-table-container .ant-table-content .ant-table-thead tr {
+  border-radius: 8px !important;
+}
+.ant-table .ant-table-container .ant-table-content .ant-table-thead tr th {
+  border-bottom: none !important;
+  padding: 10px !important;
+  margin-bottom: 10px !important;
+  border-left: none !important;
+}
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  .ant-table-thead
+  tr
+  th:first-child {
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+}
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  .ant-table-thead
+  tr
+  th:last-child {
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+.ant-table .ant-table-container .ant-table-content tbody .ant-table-cell {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-dark);
+}
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  .ant-table-tbody
+  .ant-table-expanded-row {
+  margin-top: 0px !important;
+}
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  .ant-table-tbody
+  .ant-table-expanded-row
+  td {
+  border-bottom: none !important;
+  padding: 20px !important;
+}
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  .ant-table-tbody
+  .ant-table-expanded-row
+  td:first-child {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  .ant-table-tbody
+  .ant-table-expanded-row
+  td:last-child {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  text-align: unset;
+}
+.ant-table .ant-table-container .ant-table-content .ant-table-tbody tr {
+  background-color: var(--color-white);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.13);
+}
+.ant-table .ant-table-container .ant-table-content .ant-table-tbody td {
+  border-bottom: none !important;
+  padding: 10px !important;
+}
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  .ant-table-tbody
+  td:first-child {
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+}
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  .ant-table-tbody
+  td:nth-child(2) {
+  color: var(--color-primary) !important;
+}
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  .ant-table-tbody
+  td:last-child {
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+  text-align: unset;
+}
+.ant-table table {
+  border-spacing: 0px 8px;
+}
+.ant-table .ant-table-container::after {
+  box-shadow: unset;
+}
+/*-------------------------------*/
+/*         TABLE           */
+/*-------------------------------*/
+/*-------------------------------*/
+/*        TABLE PAGINATIOND      */
+/*-------------------------------*/
+.ant-pagination-options .ant-select-selector {
+  background-color: transparent !important;
+  border: unset !important;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/*-------------------------------*/
+/*        TABLE PAGINATIOND      */
+/*-------------------------------*/
+/*-------------------------------*/
+/*        TEXT DROP DOWN         */
+/*-------------------------------*/
+.custom-antd-select.ant-select-single:not(.ant-select-customize-input)
+  .ant-select-selector {
+  height: 50px;
+  background-color: #eeeeee;
+  border: unset;
+  color: var(--color-text-dark);
+  border-radius: 6px;
+  align-items: center;
+  padding: 0px 14px;
+}
+/*-------------------------------*/
+/*        TEXT DROP DOWN         */
+/*-------------------------------*/
+/*-------------------------------*/
+/*        MODAL         */
+/*-------------------------------*/
+.ant-modal {
+  width: 80% !important;
+}
+.ant-modal-confirm {
+  width: 416px !important;
+}
+.ant-notification {
+  left: 50% !important;
+  top: 24px !important;
+  transform: translate(-50%, -5%) !important;
+}
+
+@media (max-width: 600px) {
+  .ant-layout-content {
+    padding: 0 !important;
+  }
+}
+.ant-layout-sider-trigger {
+  background: #c2c2c2;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 0px;
+}
+
+/* loader  */
+
+/**
+  * Slide in
+  *
+  * @author jh3y
+*/
+.dots:before {
+  display: block;
+  height: 5px;
+  width: 5px;
+  content: '';
+  -webkit-animation: spin 1s infinite;
+          animation: spin 1s infinite;
+  border-radius: 100%;
+  -webkit-box-shadow: 20px 0 0 5px var(--color-primary-light), -20px 0 0 5px var(--color-primary-light);
+          box-shadow: 20px 0 0 5px var(--color-primary-light), -20px 0 0 5px var(--color-primary-light); }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+            .basic:before {
+              content: '';
+              display: block;
+              height: 35px;
+              width: 35px;
+              -webkit-animation: spintwo .5s infinite linear;
+                      animation: spintwo .5s infinite linear;
+              border: 6px var(--color-info-medium) solid;
+              border-left-color: var(--color-primary-light);
+              border-radius: 100%; }
+            
+            @-webkit-keyframes spintwo {
+              to {
+                -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg); } }
+            
+            @keyframes spintwo {
+              to {
+                -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg); } }
