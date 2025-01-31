@@ -100,7 +100,7 @@ export const createIng = async (setloading, toast, body, reset) => {
   setloading(true);
 
   try {
-    const { data } = await api.post(`/ings/createIngredient`, body);
+    const { data } = await api.post(`/ingredients/createIngredient`, body);
     if (data) {
       setloading(false);
       toast.success("Ingredient Has been created successfully");
@@ -122,8 +122,7 @@ export const getAllIngsWithPagination = async (
   setloading(true);
 
   try {
-    const { data } = await api.get(
-      `/ings/getAllIngredients?page=${pagination.current}&limit=${pagination.pageSize}`
+    const { data } = await api.get(`/ingredients/getAllIngredients?page=${pagination.current}&limit=${pagination.pageSize}`);
     );
     if (data) {
       setings(data.data);
